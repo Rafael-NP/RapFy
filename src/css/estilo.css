@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px #96f8ff;
+    padding: 10px;
+}
+header #nl{
+    display: flex;
+}
+header img {
+    width: 150px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.07);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.07);
+    }
+}
+
+header h1 {
+    color: #fff;
+}
+
+header .left{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+header nav {
+    display: flex;
+
+}
+
+header nav a {
+    padding: 10px;
+    color: #91c4ff;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline 1px #91c4ff;
+}
+
+#login {
+    border-right: solid 2px #91c4ff;
+}
+
+header button {
+    padding: 4px;
+    margin: 6px;
+    background: transparent;
+    color: #00eeff;
+    border: solid 2px #00eeff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #00eeff, 0 0 8px #00eeff;
+    transition: 1s;
+    justify-content: end;
+}
+
+header button:hover {
+    background: #00eeff;
+    color: #000;
+    box-shadow: 0 0 10px #00eeff, 0 0 20px #00eeff, 0 0 40px #00eeff;
+}
+
+main {
+    height: 600px;
+}
+
+main #titulo {
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 0 0 15px #5271ff;
+}
+
+main #artistas {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+main #artistas article {
+    padding: 10%;
+    width: 30%;
+}
+
+main #artistas article img {
+    width: 200px;
+    border: solid 2px #000424;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #000424, 0 0 8px #000424;
+    box-shadow: 0 0 15px #000618;
+    transition: 1s;
+}
+
+main #artistas article img:hover {
+    box-shadow: 0 0 15px #00143f, 0 0 20px #0051ff, 0 0 40px #00eeff;
+    transform: scale(1.03);
+}
+
+main #artistas article h2 {
+    text-align: center;
+    text-wrap: nowrap;
+    margin-top: 18px;
+}
+
+footer {
+    background-image: linear-gradient(to right, #000218 70%, #000);
+    color: #fff;
+    display: flex;
+    box-shadow: 0 0 15px #000;
+    padding: 20px;
+
+}
+
+footer .devs {
+    font-size: 10px;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+footer .devs .gl {
+    width: 20px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 50px;
+    transition: 0.7s;
+}
+
+footer .devs .gl:hover {
+    transform: scale(1.16);
+    box-shadow: 0 0 2px #00eeff, 0 0 5px #00eeff, 0 0 7px #00eeff;
+}
+
+footer h5 {
+    font-size: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-left: 10%;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 780px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 130px;
+        padding: 1rem;
+    }
+
+    header img {
+        height: 110px;
+    }
+
+    header .left {
+        display: flex;
+        margin-bottom: 30px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    header nav {
+        margin-bottom: 25px;
+    }
+
+    main {
+        height: 1200px;
+    }
+
+    main #artistas {
+        width: 480px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #artistas article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #artistas h1 {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+}
